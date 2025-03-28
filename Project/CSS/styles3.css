@@ -1,0 +1,108 @@
+/* ตั้งค่าหน้าจอพื้นฐาน */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #2e8b57; /* ใช้สีเขียวของป่าไม้ */
+    color: white;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; /* ทำให้การจัดการ margin และ padding ง่ายขึ้น */
+    background-image: url('background.jpg'); /* เพิ่มภาพพื้นหลัง */
+    background-size: cover; /* ให้ภาพพื้นหลังเต็มหน้าจอ */
+    background-position: center;
+}
+
+/* หัวข้อเกม */
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #fff8dc; /* สีทองอ่อนเพื่อให้ดูเด่น */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้หัวข้อ */
+}
+
+/* คำอธิบาย */
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #f1c40f; /* ใช้สีทองเพื่อให้ตัดกับพื้นหลัง */
+}
+
+/* กำหนดสไตล์ให้ Canvas */
+canvas {
+    background-color: #000; /* สีดำสำหรับพื้นที่แสดงผล */
+    border: 5px solid #228b22; /* สีเขียวเข้มเหมือนต้นไม้ */
+    display: block;
+    margin: 0 auto;
+    width: 100%; /* ทำให้ Canvas รองรับการปรับขนาดได้ */
+    max-width: 500px; /* จำกัดขนาดสูงสุดของ Canvas */
+}
+
+/* ปุ่มทั่วไป */
+button {
+    font-size: 20px;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #2ecc71; /* สีเขียวจากต้นไม้ */
+    color: white;
+    text-transform: uppercase; /* ทำให้ข้อความเป็นตัวพิมพ์ใหญ่ */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ปุ่ม */
+}
+
+/* ปุ่มเริ่มใหม่ */
+button#restartBtn {
+    background-color: #ff4757;
+    color: white;
+    display: none; /* ซ่อนปุ่มตอนเริ่ม */
+}
+
+button#restartBtn:hover {
+    background-color: #e84118;
+}
+
+/* ปุ่มกลับหน้าหลัก */
+button#homeBtn {
+    background-color: #3498db;
+    color: white;
+}
+
+button#homeBtn:hover {
+    background-color: #2980b9;
+}
+
+/* การปรับขนาดตามหน้าจอ (Responsive Design) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px; /* ขนาดหัวข้อเล็กลงบนหน้าจอเล็ก */
+    }
+    
+    p {
+        font-size: 16px; /* ขนาดข้อความเล็กลง */
+    }
+    
+    canvas {
+        width: 90%; /* ทำให้ Canvas ใช้พื้นที่ 90% ของหน้าจอ */
+    }
+    
+    button {
+        font-size: 18px; /* ขนาดปุ่มเล็กลง */
+    }
+}
+
+/* การปรับปรุงสำหรับอุปกรณ์ขนาดเล็ก (Mobile-first approach) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    button {
+        width: 100%; /* ปรับปุ่มให้เต็มความกว้าง */
+    }
+}

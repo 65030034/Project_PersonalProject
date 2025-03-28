@@ -1,0 +1,135 @@
+/* ตั้งค่าหน้าจอพื้นฐาน */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* ส่วนหัว */
+header {
+    background-color: #2ecc71;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* หัวข้อหลัก */
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* ส่วนหลัก */
+main {
+    padding: 20px;
+}
+
+/* ส่วนข้อมูลส่วนตัว */
+.profile {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-items: center;
+}
+
+/* รูปโปรไฟล์ */
+.profile-image {
+    text-align: center;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #2ecc71;
+}
+
+/* ข้อความในข้อมูลส่วนตัว */
+.info h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* รายการข้อมูล */
+.info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+/* สไตล์สำหรับปุ่มกลับหน้าหลัก */
+.back-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-btn {
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: #2980b9;
+}
+
+/* ปรับขนาดหน้าจอให้เหมาะสมกับมือถือ */
+@media (max-width: 768px) {
+    .profile {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .home-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* เมื่อหน้าจอเล็กสุด */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .profile-image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .home-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
